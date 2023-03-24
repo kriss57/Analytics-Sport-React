@@ -1,0 +1,19 @@
+.Header {
+  height: 91px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+img {
+  padding-left: 20px;
+  width: 178px;
+  height: 61px;
+}
+nav {
+  width: 100%;
+}
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
