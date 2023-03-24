@@ -1,0 +1,22 @@
+.User {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 400px;
+  height: 100px;
+  background-color: black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+p {
+  color: rgb(206, 121, 121);
+  font-weight: 800;
+  font-size: xx-large;
+}
