@@ -15,8 +15,8 @@ a {
   border-radius: 5px;
   margin-bottom: 20px;
 }
-p {
-  color: rgb(206, 121, 121);
+.user-name {
+  color: rgb(206, 71, 71);
   font-weight: 800;
   font-size: xx-large;
 }

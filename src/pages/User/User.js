@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 //import { userService } from '../_services/user.service';
-import { mockService } from '../../_services/mock.service';
+import { mockService } from '../../_services/mockUser.service';
 
 import './user.css'
 
@@ -22,7 +22,7 @@ const User = () => {
             <h1>Choix de l'utilisateur</h1>
             {users.map(user => (
                 <Link className='link' key={user.id} to={`/user/home/${user.id}`}>
-                    <p key={user.id}>{user.userInfos.firstName} {user.userInfos.lastName}</p>
+                    <p className='user-name' key={user.id}>{user.userInfos.firstName} {user.userInfos.lastName}</p>
                 </Link>
             ))}
         </div>

@@ -1,66 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts'
 
-import { userService } from '../_services/user.service';
+//import { userService } from '../_services/user.service';
+import { mockService } from '../_services/mockUser.service';
 
-const BarChartComponent = () => {
-    const [userActivity, setUserActivity] = useState([])
+const BarChartComponent = ({ uid }) => {
+    const [mockActivity, setMockActivity] = useState([])
 
     useEffect(() => {
         console.log('useEffect');
-        userService.getUserActivity(12)
+        mockService.getMockActivity(parseInt(uid))
             .then(res => {
-                console.log(res.data.data.sessions)
-                setUserActivity(res.data.data)
+                console.log(res);
+                setMockActivity(res.data)
             })
             .catch(error => console.log(error))
-    }, [])
+    }, [uid])
 
-
-    // const data = [ cree un mock a laplace
-    //     {
-    //         name: 'Page A',
-    //         uv: 4000,
-    //         pv: 2400,
-    //         amt: 2400,
-    //     },
-    //     {
-    //         name: 'Page B',
-    //         uv: 3000,
-    //         pv: 1398,
-    //         amt: 2210,
-    //     },
-    //     {
-    //         name: 'Page C',
-    //         uv: 2000,
-    //         pv: 3000,
-    //         amt: 2290,
-    //     },
-    //     {
-    //         name: 'Page D',
-    //         uv: 2780,
-    //         pv: 3908,
-    //         amt: 2000,
-    //     },
-    //     {
-    //         name: 'Page E',
-    //         uv: 1890,
-    //         pv: 9000,
-    //         amt: 2181,
-    //     },
-    //     {
-    //         name: 'Page F',
-    //         uv: 2390,
-    //         pv: 3800,
-    //         amt: 2500,
-    //     },
-    //     {
-    //         name: 'Page G',
-    //         uv: 3490,
-    //         pv: 4300,
-    //         amt: 2100,
-    //     },
-    // ];
 
 
     return (
@@ -68,7 +24,7 @@ const BarChartComponent = () => {
 
             <BarChart width={800}
                 height={500}
-                data={userActivity.sessions}
+                data={mockActivity.sessions}
                 margin={{
                     top: 20,
                     right: 30,
