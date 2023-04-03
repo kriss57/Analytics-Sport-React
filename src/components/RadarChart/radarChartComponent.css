@@ -1,0 +1,10 @@
+.RadarChartComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 258px;
+  height: 263px;
+  border-radius: 5px;
+  background-color: rgb(49, 62, 98);
+  margin-left: 40px;
+}

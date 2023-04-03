@@ -1,0 +1,13 @@
+.BarChartConponent {
+  width: 835px;
+  height: 320px;
+}
+.test {
+  width: 50px;
+}
+.activity-title {
+  width: 200px;
+  position: absolute;
+  top: 180px;
+  left: 220px;
+}
