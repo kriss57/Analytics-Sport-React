@@ -9,7 +9,7 @@ const User = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        mockService.getMockUser()
+        mockService.getMockAllUsers()
             .then(res => {
                 setUsers(res.data)
                 console.log(res.data)

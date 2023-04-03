@@ -8,12 +8,12 @@ import theRock from '../../assets/images/icon-the-rock.png'
 
 const ItemsBar = () => {
     return (
-        <div className='ItemsBar' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <div className="imageContainer" style={{ height: "35%", display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                <img style={{ width: '64px', height: '64px' }} src={yoga} alt="" />
-                <img style={{ width: '64px', height: '64px' }} src={swimmer} alt="" />
-                <img style={{ width: '64px', height: '64px' }} src={cycle} alt="" />
-                <img style={{ width: '64px', height: '64px' }} src={theRock} alt="" />
+        <div className='ItemsBar' >
+            <div className="imageContainer" style={{ height: "35%", display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' }}>
+                <img style={{ width: '64px', height: '64px', padding: '0' }} src={yoga} alt="" />
+                <img style={{ width: '64px', height: '64px', padding: '0' }} src={swimmer} alt="" />
+                <img style={{ width: '64px', height: '64px', padding: '0' }} src={cycle} alt="" />
+                <img style={{ width: '64px', height: '64px', padding: '0' }} src={theRock} alt="" />
             </div>
             <p className='copiryght'>Copiryght, SportSee 2020</p>
         </div>

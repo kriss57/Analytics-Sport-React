@@ -1,18 +1,28 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
-import BarChartComponent from '../../components/BarChartComponent'
+import BarChartComponent from '../../components/BarChart/BarChartComponent'
 import ItemsBar from '../../components/itemsBar/ItemsBar';
+import LineChartComponent from '../../components/LineChart/LineChartComponent';
+import RadaChartComponent from '../../components/RadarChart/RadaChartComponent';
+import Title from '../../components/Title/Title';
+
+
+import './home.css'
 
 const Home = () => {
     let { uid } = useParams()
 
     return (
-        <div className="Home">
-            <main>
-                <ItemsBar />
+        <main className="Home">
+            <ItemsBar />
+            <div className="graphics">
+                <Title uid={uid} />
                 <BarChartComponent uid={uid} />
-            </main>
-        </div>
+                <div className="mini-graph">
+                    <LineChartComponent uid={uid} />
+                    <RadaChartComponent uid={uid} />
+                </div>
+            </div>
+        </main>
     );
 };
 
