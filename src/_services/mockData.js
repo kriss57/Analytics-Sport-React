@@ -1,10 +1,11 @@
-import axios from 'axios'
+//import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
+import Axios from './caller.service'
 
 import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from '../_utils/mock'
 
 // New instance of axios-mock-adapter
-const mock = new MockAdapter(axios)
+const mock = new MockAdapter(Axios)
 
 // Simulation of request "get" for all endpoints
 // "use methodes (onGet(url).reply(satus,content for response))"

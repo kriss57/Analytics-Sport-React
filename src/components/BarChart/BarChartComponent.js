@@ -46,7 +46,7 @@ const BarChartComponent = ({ uid }) => {
                         bottom: 5,
                     }}>
                     <CartesianGrid vertical={false} strokeDasharray="3 3" />
-                    <XAxis dataKey="day" tickFormatter={(date) => new Date(date).getDate().toString()} />
+                    <XAxis dataKey="day" tickFormatter={mockActivity.day} />
                     <YAxis orientation="right" />
                     <Tooltip />
                     <Legend payload={legendItems} verticalAlign="top" height={60} iconType='circle' iconSize={6} align='right' itemMarginRight={60} />
