@@ -1,18 +1,13 @@
 import axios from "axios";
 
-
-// dotenv ne fonctionne pas A VOIR
-
-console.log(process.env.REACT_APP_NODE_ENV)
-console.log(process.env.REACT_APP_API_URL);
 const isDev = process.env.REACT_APP_NODE_ENV === 'dev-mod'
-const url = !isDev ? process.env.REACT_APP_MOCK_URL : process.env.REACT_APP_API_URL
+const url = isDev ? process.env.REACT_APP_MOCK_URL : process.env.REACT_APP_API_URL
 
 if (isDev) {
     console.log(url);
     console.log('en devlopment');
 }
-
+// ici ajouté l url pour les appels axios
 const Axios = axios.create()
 
 Axios.interceptors.response.use(response => {
