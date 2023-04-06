@@ -1,0 +1,9 @@
+.PieChartComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 258px;
+  height: 263px;
+  padding: 20px;
+  margin-left: 20px;
+}
