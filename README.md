@@ -21,7 +21,7 @@
 
 This project is the front of the SportSee application. It is an application that integrates graphics on the user's sports activity.
 
-Projet lancer avec le [Create React App](https://github.com/facebook/create-react-app).
+Project launched with the [Create React App](https://github.com/facebook/create-react-app).
 
 ## Features
 
@@ -29,14 +29,15 @@ Projet lancer avec le [Create React App](https://github.com/facebook/create-reac
 - Data manipulation with an API Mock
 - Data manipulation with a Rest API
 
-## Pre-requisites
+## Prerequisites
 
 To work properly check your environment
 
 - [NodeJS (**version 18 or higher**)](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
 
-To work properly, once the project is built, it uses a Rest API
+link to download the Rest Api
+
 [https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
 # Installation
@@ -59,13 +60,7 @@ npm  start
 
 ### Manual switch development API
 
-1/.Go to the root of the project in the .env file and comment variable :
-
-```
-#REACT_APP_NODE_ENV = dev-mod
-```
-
-2/.Go to the root of the project in the file package.json/"scripts" and change :
+Go to the root of the project in the file package.json/"scripts" and change :
 
 ```
  "start": "cross-env REACT_APP_NODE_ENV = dev-mod react-scripts start"
@@ -88,5 +83,5 @@ npm start
 To build and generate the html, css and js files, you have the command (the generation will be done in the build folder)
 
 ```
-npm build
+npm run build
 ```
