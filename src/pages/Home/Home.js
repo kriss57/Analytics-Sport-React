@@ -9,7 +9,10 @@ import PieChartComponent from '../../components/PieChart/PieChartComponent';
 
 import './home.css'
 
-
+/**
+ * Main page
+ * @returns template
+ */
 const Home = () => {
     let { uid } = useParams()
 

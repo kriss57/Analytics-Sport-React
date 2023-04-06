@@ -1,9 +1,15 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types'
 
 import './pieChartComponent.css'
 
-const PieChartComponent = () => {
+/**
+ * 
+ * @param {string} uid
+ * @returns template
+ */
+const PieChartComponent = ({ uid }) => {
 
     const data = [
         { name: 'Group A', value: 1500 },
@@ -37,5 +43,9 @@ const PieChartComponent = () => {
         </div>
     );
 };
+
+PieChartComponent.prototype = {
+    uid: PropTypes.string.isRequired
+}
 
 export default PieChartComponent;

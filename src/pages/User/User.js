@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { userService } from '../../_services/user.service';
 
-
 import './user.css'
 
 const User = () => {
@@ -12,9 +11,8 @@ const User = () => {
         userService.getAllUsers()
             .then(res => {
                 setUsers(res.data)
-                console.log(res)
             })
-            .catch(err => console.log(err + '***** dans erreur ****'))
+            .catch(err => console.log(err))
     }, [])
 
     return (

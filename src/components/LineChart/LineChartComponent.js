@@ -2,9 +2,15 @@ import React from 'react';
 import { LineChart, XAxis, Tooltip, Line, ResponsiveContainer, YAxis } from 'recharts';
 import { useEffect, useState } from 'react';
 import { userService } from '../../_services/user.service'
+import PropTypes from 'prop-types'
 
 import './lineChartComponent.css'
 
+/**
+ * 
+ * @param {string} uid
+ * @returns template
+ */
 const LineChartComponent = ({ uid }) => {
 
     const [sessions, setSessions] = useState([])
@@ -23,8 +29,6 @@ const LineChartComponent = ({ uid }) => {
         day: semaine[s.day - 1]
 
     }))
-    console.log(mapeData);
-
 
     return (
         <div className="LineChartComponent">
@@ -44,5 +48,9 @@ const LineChartComponent = ({ uid }) => {
 
     );
 };
+
+LineChartComponent.prototype = {
+    uid: PropTypes.string.isRequired
+}
 
 export default LineChartComponent;

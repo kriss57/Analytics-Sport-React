@@ -2,17 +2,21 @@ import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { useEffect, useState } from 'react';
 import { userService } from '../../_services/user.service';
+import PropTypes from 'prop-types'
+
 import './radarChartComponent.css'
 
-
-
+/**
+ * 
+ * @param {string} uid
+ * @returns template
+ */
 const RadaChartComponent = ({ uid }) => {
     const [performance, setPerformance] = useState([])
 
     useEffect(() => {
         userService.getUserPerformance(parseInt(uid))
             .then(res => {
-                console.log(res);
                 setPerformance(res.data.data)
             })
             .catch(error => console.log(error))
@@ -24,7 +28,6 @@ const RadaChartComponent = ({ uid }) => {
         kind: performance.kind[d.kind]
     }))
 
-    console.log(mapeData);
     return (
         <div className='RadarChartComponent'>
             <ResponsiveContainer width="100%" height={220}>
@@ -37,5 +40,9 @@ const RadaChartComponent = ({ uid }) => {
         </div>
     );
 };
+
+RadaChartComponent.prototype = {
+    uid: PropTypes.string.isRequired
+}
 
 export default RadaChartComponent;
