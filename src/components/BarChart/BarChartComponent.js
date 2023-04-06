@@ -14,8 +14,6 @@ const BarChartComponent = ({ uid }) => {
     useEffect(() => {
         userService.getUserActivity(parseInt(uid))
             .then(res => {
-                console.log('dans then')
-                console.log(res)
                 setMockActivity(res.data.data)
             })
             .catch(error => console.log(error))
