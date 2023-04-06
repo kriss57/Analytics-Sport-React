@@ -3,7 +3,11 @@ import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Le
 import { userService } from '../../_services/user.service'
 import PropTypes from 'prop-types'
 import './barChartComponent.css'
-
+/**
+ * 
+ * @param {string} uid
+ * @returns template 
+ */
 const BarChartComponent = ({ uid }) => {
     const [mockActivity, setMockActivity] = useState([])
 
@@ -22,17 +26,6 @@ const BarChartComponent = ({ uid }) => {
         { value: 'Calories brûlées (kCal)', color: "#E60000", style: { marginRight: '50px' } }
     ]
 
-    // const customTitle = (props) => {
-    //     const { payload } = props
-    //     return (
-    //         <div className="customTitle">
-    //             <span>{payload.value}</span>
-    //             <br />
-    //             <span>{payload.value}</span>
-    //         </div>
-
-    //     )
-    // }
 
     return (
         <div className="BarChartConponent" >
