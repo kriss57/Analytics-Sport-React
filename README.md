@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+<div align="center">
+- <img src="./src/assets/images/logo.png" width="24"/> ReactJS 18
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SportSee - Front End ReactJS 18
 
-## Available Scripts
+- <img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" width="24"/> ReactJS 18
+</div>
 
-In the project directory, you can run:
+<p align="center">
+    <img src="https://img.shields.io/badge/React-v18.2.0-blue">
+    <img src="https://img.shields.io/badge/React--Router-6.9.0-blue">
+    <img src="https://img.shields.io/badge/cross-env-7.0.3-violet">
+    <img src="https://img.shields.io/badge/node--lts-18.15.0-brightgreen">   
+    <img src="https://img.shields.io/badge/npm-9.5.1-brightgreen">
+    <img src="https://img.shields.io/badge/recharts-2.5.0-violet">
+    <img src="https://img.shields.io/badge/axios-mock-adapter-1.21.2-violet">
+  <br><br><br>
+</p>
 
-### `npm start`
+# About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is the front of the SportSee application. It is an application that integrates graphics on the user's sports activity.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Projet lancer avec le [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Application with 2 public pages : USER and HOME
+- Data manipulation with an API Mock
+- Data manipulation with a Rest API
 
-### `npm run build`
+## Pre-requisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To work properly check your environment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [NodeJS (**version 18 or higher**)](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To work properly, once the project is built, it uses a Rest API
+[https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
-### `npm run eject`
+# Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Once the repository is cloned and in the project folder, do not forget to install the dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Launch
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Dévlopment
 
-## Learn More
+This project starts in development mode and will automatically use the mock with the command :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm  start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Manual switch development API
 
-### Code Splitting
+1/.Go to the root of the project in the .env file and comment variable :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+#REACT_APP_NODE_ENV = dev-mod
+```
 
-### Analyzing the Bundle Size
+2/.Go to the root of the project in the file package.json/"scripts" and:
+change
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+ "start": "cross-env REACT_APP_NODE_ENV=dev-mod react-scripts start"
+```
 
-### Making a Progressive Web App
+to
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+ "start": "cross-env REACT_APP_NODE_ENV=prod-mod react-scripts start"
+```
 
-### Advanced Configuration
+3/.Redémarrer en mode développement
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+npm start
+```
 
-### Deployment
+### Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Pour construire et générer les fichier html css et js, vous avez la commande (la génération se fera dans le dossier build)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm build
+```
