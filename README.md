@@ -1,7 +1,7 @@
 <div align="center">
-<img src="./src/assets/images/logo.png" width="150"/>
+<img src="./src/assets/images/logo.png" width="180"/>
 
-# SportSee - Front End ReactJS 18
+# SportSee - Front End
 
 <img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" width="24"/> ReactJS 18
 
@@ -47,7 +47,7 @@ Once the repository is cloned and in the project folder, do not forget to instal
 npm install
 ```
 
-## Launch
+# Launch
 
 ### Dévlopment
 
@@ -65,20 +65,19 @@ npm  start
 #REACT_APP_NODE_ENV = dev-mod
 ```
 
-2/.Go to the root of the project in the file package.json/"scripts" and:
-change
+2/.Go to the root of the project in the file package.json/"scripts" and change :
 
 ```
- "start": "cross-env REACT_APP_NODE_ENV=dev-mod react-scripts start"
+ "start": "cross-env REACT_APP_NODE_ENV = dev-mod react-scripts start"
 ```
 
 to
 
 ```
- "start": "cross-env REACT_APP_NODE_ENV=prod-mod react-scripts start"
+ "start": "cross-env REACT_APP_NODE_ENV = prod-mod react-scripts start"
 ```
 
-3/.Redémarrer en mode développement
+3/.Restart in development mode
 
 ```
 npm start
@@ -86,7 +85,7 @@ npm start
 
 ### Production
 
-Pour construire et générer les fichier html css et js, vous avez la commande (la génération se fera dans le dossier build)
+To build and generate the html, css and js files, you have the command (the generation will be done in the build folder)
 
 ```
 npm build
