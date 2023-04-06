@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./src/assets/images/logo.png" width="69"/> ReactJS 18
+<img src="./src/assets/images/logo.png" width="150"/>
 
 # SportSee - Front End ReactJS 18
 
@@ -10,12 +10,11 @@
 <p align="center">
     <img src="https://img.shields.io/badge/React-v18.2.0-blue">
     <img src="https://img.shields.io/badge/React--Router-6.9.0-blue">
-    <img src="https://img.shields.io/badge/cross-env-7.0.3-violet">
     <img src="https://img.shields.io/badge/node--lts-18.15.0-brightgreen">   
     <img src="https://img.shields.io/badge/npm-9.5.1-brightgreen">
     <img src="https://img.shields.io/badge/recharts-2.5.0-violet">
-    <img src="https://img.shields.io/badge/axios-mock-adapter-1.21.2-violet">
-  <br><br><br>
+    <img src="https://img.shields.io/badge/axios-1.3.4-violet">
+  <br>
 </p>
 
 # About
