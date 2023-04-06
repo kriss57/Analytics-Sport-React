@@ -1,10 +1,10 @@
 <div align="center">
-- <img src="./src/assets/images/logo.png" width="24"/> ReactJS 18
-</div>
+<img src="./src/assets/images/logo.png" width="69"/> ReactJS 18
 
 # SportSee - Front End ReactJS 18
 
-- <img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" width="24"/> ReactJS 18
+<img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" width="24"/> ReactJS 18
+
 </div>
 
 <p align="center">
