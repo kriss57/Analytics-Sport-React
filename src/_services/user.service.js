@@ -1,13 +1,19 @@
 import Axios from './caller.service'
-import axios from 'axios'
 import './mockData'
 
 const isDev = process.env.REACT_APP_NODE_ENV === 'dev-mod'
-
+/**
+ * Recovering all users
+ * @returns {Promise}
+ */
 let getAllUsers = () => {
     return Axios.get('/user_main-data')
 }
-
+/**
+ * Recovering one user
+ * @param {number} userId 
+ * @returns {promise}
+ */
 let getUser = (userId) => {
     if (isDev) {
         return Axios.get('/user_main-data/userId', { params: { userId: userId } })
@@ -15,7 +21,11 @@ let getUser = (userId) => {
         return Axios.get(`/user/${userId}`)
     }
 }
-
+/**
+ * Recovering user's activity data
+ * @param {number} userId 
+ * @returns {promise}
+ */
 let getUserActivity = (userId) => {
     if (isDev) {
         return Axios.get('/user_activity/userId', { params: { userId: userId } })
@@ -24,7 +34,11 @@ let getUserActivity = (userId) => {
     }
 
 }
-
+/**
+ * Recovering user's sessions data
+ * @param {number} userId 
+ * @returns {promise}
+ */
 let getUserAverageSessions = (userId) => {
     if (isDev) {
         return Axios.get('/user_average_sessions/userId', { params: { userId: userId } })
@@ -34,7 +48,11 @@ let getUserAverageSessions = (userId) => {
 
 
 }
-
+/**
+ * Recovering user's performance data
+ * @param {number} userId 
+ * @returns {promise}
+ */
 let getUserPerformance = (userId) => {
     if (isDev) {
         return Axios.get('/user_user-performance/userId', { params: { userId: userId } })
