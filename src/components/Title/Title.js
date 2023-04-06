@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { mockService } from '../../_services/mockUser.service';
-
+import { userService } from '../../_services/user.service';
 
 const Title = ({ uid }) => {
     console.log(uid);
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState({})
 
     useEffect(() => {
-        mockService.getMockUser(parseInt(uid))
+        userService.getUser(parseInt(uid))
             .then((res) => {
                 console.log(res)
-                setUser(res.data.userInfos)
+                setUser(res.data.data.userInfos)
             })
             .catch(err => console.log(err))
     }, [uid])

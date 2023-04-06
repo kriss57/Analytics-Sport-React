@@ -1,20 +1,19 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { useEffect, useState } from 'react';
-import { mockService } from '../../_services/mockUser.service';
+import { userService } from '../../_services/user.service';
 import './radarChartComponent.css'
 
 
 
 const RadaChartComponent = ({ uid }) => {
     const [performance, setPerformance] = useState([])
-    //const [kind, setKind] = useState({})
 
     useEffect(() => {
-        mockService.getMockPerformance(parseInt(uid))
+        userService.getUserPerformance(parseInt(uid))
             .then(res => {
                 console.log(res);
-                setPerformance(res.data)
+                setPerformance(res.data.data)
             })
             .catch(error => console.log(error))
     }, [uid])
@@ -29,10 +28,10 @@ const RadaChartComponent = ({ uid }) => {
     return (
         <div className='RadarChartComponent'>
             <ResponsiveContainer width="100%" height={220}>
-                <RadarChart cx="50%" cy="50%" outerRadius="90%" data={mapeData}>
+                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={mapeData}>
                     <PolarGrid radialLines={false} />
-                    <PolarAngleAxis dataKey="kind" />
-                    <Radar name="performance" dataKey="value" fill="red" fillOpacity={0.7} />
+                    <PolarAngleAxis dataKey="kind" dy={4} tickSize={17} />
+                    <Radar name="performance" dataKey="value" fill="red" fillOpacity={0.5} />
                 </RadarChart>
             </ResponsiveContainer>
         </div>

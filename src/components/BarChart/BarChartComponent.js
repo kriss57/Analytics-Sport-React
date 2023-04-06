@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts'
-//import { userService } from '../_services/user.service';
-import { mockService } from '../../_services/mockUser.service';
+import { userService } from '../../_services/user.service'
 import PropTypes from 'prop-types'
 import './barChartComponent.css'
 
@@ -9,9 +8,11 @@ const BarChartComponent = ({ uid }) => {
     const [mockActivity, setMockActivity] = useState([])
 
     useEffect(() => {
-        mockService.getMockActivity(parseInt(uid))
+        userService.getUserActivity(parseInt(uid))
             .then(res => {
-                setMockActivity(res.data)
+                console.log('dans then')
+                console.log(res)
+                setMockActivity(res.data.data)
             })
             .catch(error => console.log(error))
     }, [uid])

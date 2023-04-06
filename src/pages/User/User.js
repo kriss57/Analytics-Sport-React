@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
-//import { userService } from '../_services/user.service';
-import { mockService } from '../../_services/mockUser.service';
+import { userService } from '../../_services/user.service';
+
 
 import './user.css'
 
@@ -9,12 +9,12 @@ const User = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        mockService.getMockAllUsers()
+        userService.getAllUsers()
             .then(res => {
                 setUsers(res.data)
-                console.log(res.data)
+                console.log(res)
             })
-            .catch(err => console.log(err))
+            .catch(err => console.log(err + '***** dans erreur ****'))
     }, [])
 
     return (
@@ -25,7 +25,9 @@ const User = () => {
                     <p className='user-name' key={user.id}>{user.userInfos.firstName} {user.userInfos.lastName}</p>
                 </Link>
             ))}
-        </div>
+            <h2 style={{ color: 'green' }}>Vous êtes en {process.env.REACT_APP_NODE_ENV} sur {process.env.REACT_APP_MOCK_URL}</h2>
+            <button style={{ padding: '10px', backgroundColor: 'black', color: 'green', fontSize: 30, borderRadius: 10, border: 'solid 1px violet', cursor: 'pointer' }}>SWITCH API</button>
+        </div >
     );
 };
 

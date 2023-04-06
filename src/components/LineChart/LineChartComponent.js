@@ -1,7 +1,7 @@
 import React from 'react';
 import { LineChart, XAxis, Tooltip, Line, ResponsiveContainer, YAxis } from 'recharts';
 import { useEffect, useState } from 'react';
-import { mockService } from '../../_services/mockUser.service';
+import { userService } from '../../_services/user.service'
 
 import './lineChartComponent.css'
 
@@ -10,9 +10,9 @@ const LineChartComponent = ({ uid }) => {
     const [sessions, setSessions] = useState([])
 
     useEffect(() => {
-        mockService.getMockSessions(parseInt(uid))
+        userService.getUserAverageSessions(parseInt(uid))
             .then(res => {
-                setSessions(res.data)
+                setSessions(res.data.data)
             })
             .catch(error => console.log(error))
     }, [uid])
