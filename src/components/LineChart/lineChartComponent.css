@@ -2,17 +2,23 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 268px;
-  height: 283px;
+  width: 278px;
   border-radius: 5px;
   background-color: red;
+  background-image: linear-gradient(
+    to right,
+    transparent 73%,
+    rgba(196, 11, 11, 0.5) 70%
+  );
 }
+
 .title {
-  width: 160px;
+  max-width: 160px;
   text-align: start;
   margin-bottom: 0;
   margin-top: 10px;
-  font-size: small;
+  font-size: 18px;
+  font-weight: normal;
   padding-left: 15px;
-  color: #ffffff;
+  color: #eedede;
 }
