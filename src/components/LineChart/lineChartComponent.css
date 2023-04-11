@@ -22,3 +22,11 @@
   padding-left: 15px;
   color: #eedede;
 }
+.custom_lineChart_toolTip {
+  background-color: white;
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
