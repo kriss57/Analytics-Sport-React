@@ -1,6 +1,8 @@
 .BarChartConponent {
-  width: 835px;
+  max-width: 935px;
   height: 320px;
+  position: relative;
+  z-index: 1;
 }
 .test {
   width: 50px;
@@ -8,6 +10,39 @@
 .activity-title {
   width: 200px;
   position: absolute;
-  top: 260px;
-  left: 220px;
+  top: 0px;
+  left: 0px;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#txt-error {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+.custom_toolTip {
+  background-color: #d20c0c;
+  font-size: 10px;
+  color: white;
+  width: 50px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.label {
+  font-weight: 500;
+  font-size: 12px;
 }
