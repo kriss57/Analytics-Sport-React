@@ -25,7 +25,7 @@ const CounterBar = ({ uid }) => {
             .catch(err => console.log(err))
     }, [uid])
 
-
+    const calorieData = allData?.calorieCount?.toLocaleString()
     return (
         <div className='CounterBar'>
             <div className="card">
@@ -33,8 +33,8 @@ const CounterBar = ({ uid }) => {
                     <img style={{ borderRadius: '6px', background: 'rgba(253, 81, 129, 0.1)', padding: '20px', width: '20px', height: '20px' }} src={calImg} alt="flamme" />
                 </div>
                 <div className="count">
-                    <p style={{ fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>{allData.calorieCount}kCal</p>
-                    <h3 style={{ fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Calories</h3>
+                    <p style={{ margin: '0', fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>{calorieData}kCal</p>
+                    <h3 style={{ margin: '0', fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Calories</h3>
                 </div>
             </div>
             <div className="card">
@@ -42,8 +42,8 @@ const CounterBar = ({ uid }) => {
                     <img style={{ borderRadius: '6px', background: 'rgba(74, 184, 255, 0.1)', padding: '20px', width: '20px', height: '20px' }} src={protImg} alt="viande" />
                 </div>
                 <div className="count">
-                    <p style={{ fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>count</p>
-                    <h3 style={{ fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Proteines</h3>
+                    <p style={{ margin: '0', fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>{allData.proteinCount}g</p>
+                    <h3 style={{ margin: '0', fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Proteines</h3>
                 </div>
             </div>
             <div className="card">
@@ -51,8 +51,8 @@ const CounterBar = ({ uid }) => {
                     <img style={{ borderRadius: '6px', background: 'rgba(249, 206, 35, 0.1)', padding: '20px', width: '20px', height: '20px' }} src={appleImg} alt="pomme" />
                 </div>
                 <div className="count">
-                    <p style={{ fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>count</p>
-                    <h3 style={{ fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Glucides</h3>
+                    <p style={{ margin: '0', fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>{allData.carbohydrateCount}g</p>
+                    <h3 style={{ margin: '0', fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Glucides</h3>
                 </div>
             </div>
             <div className="card">
@@ -60,8 +60,8 @@ const CounterBar = ({ uid }) => {
                     <img style={{ borderRadius: '6px', background: 'rgba(253, 81, 129, 0.1)', padding: '20px', width: '20px', height: '20px' }} src={cheeseburger} alt="cheeseburger" />
                 </div>
                 <div className="count">
-                    <p style={{ fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>count</p>
-                    <h3 style={{ fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Lipides</h3>
+                    <p style={{ margin: '0', fontStyle: 'normal', fontSize: '20px', fontWeight: '700' }}>{allData.lipidCount}g</p>
+                    <h3 style={{ margin: '0', fontStyle: 'normal', fontSize: '14px', fontWeight: '500' }}>Lipides</h3>
                 </div>
             </div>
         </div>

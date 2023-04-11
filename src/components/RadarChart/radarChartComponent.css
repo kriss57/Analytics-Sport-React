@@ -2,11 +2,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 268px;
-
+  width: 300px;
   border-radius: 5px;
-  background-color: rgb(49, 62, 98);
-  margin-left: 30px;
-
   background-color: #282d30;
+}
+@media screen and (max-width: 1440px) {
+  .RadarChartComponent {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .RadarChartComponent {
+    margin-bottom: 20px;
+    width: 100%;
+  }
 }

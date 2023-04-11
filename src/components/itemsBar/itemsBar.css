@@ -1,5 +1,5 @@
 .ItemsBar {
-  height: 100vh;
+  min-height: 100vh;
   width: 117px;
   background-color: black;
   display: flex;

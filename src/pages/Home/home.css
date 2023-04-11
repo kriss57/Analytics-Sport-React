@@ -1,13 +1,44 @@
+.Home {
+  display: flex;
+}
+.container-graph {
+  width: 100%;
+  display: flex;
+}
 .graphics {
-  width: 80%;
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  margin-left: 130px;
 }
 .mini-graph {
-  max-width: 100%;
-  max-height: 283px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   margin-top: 20px;
+}
+@media screen and (max-width: 1440px) {
+  .graphics {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Home {
+    display: flex;
+  }
+  .container-graph {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .graphics {
+    width: 690px;
+    margin: 0;
+  }
+  .mini-graph {
+    flex-wrap: wrap;
+    width: 690px;
+  }
 }

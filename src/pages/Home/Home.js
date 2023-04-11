@@ -20,17 +20,21 @@ const Home = () => {
     return (
         <main className="Home">
             <ItemsBar />
-            <div className="graphics">
-                <Title uid={uid} />
-                <BarChartComponent uid={uid} />
-                <div className="mini-graph">
-                    <LineChartComponent uid={uid} />
-                    <RadaChartComponent uid={uid} />
-                    <PieChartComponent uid={uid} />
-                </div>
 
+            <div className="container-graph">
+
+                <div className="graphics">
+                    <Title uid={uid} />
+                    <BarChartComponent uid={uid} />
+                    <div className="mini-graph">
+                        <LineChartComponent uid={uid} />
+                        <RadaChartComponent uid={uid} />
+                        <PieChartComponent uid={uid} />
+                    </div>
+                </div>
+                <CounterBar uid={uid} />
             </div>
-            <CounterBar uid={uid} />
+
         </main>
     );
 };

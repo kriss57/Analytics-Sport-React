@@ -1,8 +1,10 @@
 .BarChartConponent {
-  max-width: 935px;
+  width: 980px;
   height: 320px;
   position: relative;
   z-index: 1;
+  background-color: #fbfbfb;
+  padding: 15px;
 }
 .test {
   width: 50px;
@@ -10,8 +12,8 @@
 .activity-title {
   width: 200px;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 15px;
+  left: 15px;
 }
 .error {
   display: flex;
@@ -45,4 +47,14 @@
 .label {
   font-weight: 500;
   font-size: 12px;
+}
+@media screen and (max-width: 1440px) {
+  .BarChartConponent {
+    max-width: 860px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .BarChartConponent {
+    max-width: 690px;
+  }
 }

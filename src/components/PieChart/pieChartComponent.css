@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 258px;
+  width: 280px;
   height: 243px;
   padding: 20px;
   position: relative;
   background-color: #fbfbfb;
-  margin-left: 30px;
 }
 .score {
   position: absolute;
@@ -17,4 +16,15 @@
 }
 .perf-title {
   margin: 0;
+}
+@media screen and (max-width: 1440px) {
+  .PieChartComponent {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .PieChartComponent {
+    width: 100%;
+    margin-left: 0;
+  }
 }
