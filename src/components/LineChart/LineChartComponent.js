@@ -23,7 +23,8 @@ const LineChartComponent = ({ uid }) => {
             .catch(error => console.log(error))
     }, [uid])
 
-    const semaine = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+    // formatage a isoler
+    const semaine = ['  L', 'M', 'M', 'J', 'V', 'S', 'D  ']
     const mapeData = sessions.sessions?.map(s => ({
         ...s,
         day: semaine[s.day - 1]
@@ -34,14 +35,14 @@ const LineChartComponent = ({ uid }) => {
         <div className="LineChartComponent">
             <h3 className='title'>Durée moyenne des sessions</h3>
             <ResponsiveContainer width="100%" height={220}>
-
                 <LineChart
                     data={mapeData}
-                    margin={{ top: 0, bottom: 0, left: 0, right: 0 }}>
+                    margin={{ top: 0, bottom: 0, left: 0, right: 0 }} >
                     <YAxis axisLine={false} hide={true} />
-                    <XAxis dataKey="day" ticks={10} interval='preserveStartEnd' padding={{ left: 0, right: 0 }} axisLine={false} tickLine={false} />
+                    <XAxis dataKey="day" ticks={10} interval='preserveStartEnd' padding={{ left: 0, right: 0 }} axisLine={false} tickLine={false} tick={{ fill: "#FFFFFF" }} />
                     <Tooltip />
-                    <Line dot={false} type="monotone" dataKey="sessionLength" stroke="#8884d8" />
+                    <Line dot={false} type="monotone" dataKey="sessionLength" stroke="#FFFFFF" />
+
                 </LineChart>
             </ResponsiveContainer>
         </div>
