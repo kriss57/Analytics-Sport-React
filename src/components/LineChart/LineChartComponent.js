@@ -9,7 +9,7 @@ import './lineChartComponent.css'
 /**
  * 
  * @param {string} uid
- * @returns template
+ * @returns {JSX.Element} 
  */
 const LineChartComponent = ({ uid }) => {
 
@@ -31,6 +31,19 @@ const LineChartComponent = ({ uid }) => {
 
     }))
 
+    const customToolTip = ({ active, payload, label }) => {
+
+        if (active && payload) {
+            let duration = payload[0]['value']
+            return (
+                <div className="custom_lineChart_toolTip">
+                    <p className='label'>{duration}min</p>
+                </div>
+            )
+        }
+        return null
+    }
+
     return (
         <div className="LineChartComponent">
             <h3 className='title'>Durée moyenne des sessions</h3>
@@ -40,7 +53,7 @@ const LineChartComponent = ({ uid }) => {
                     margin={{ top: 0, bottom: 0, left: 0, right: 0 }} >
                     <YAxis axisLine={false} hide={true} />
                     <XAxis dataKey="day" ticks={10} interval='preserveStartEnd' padding={{ left: 0, right: 0 }} axisLine={false} tickLine={false} tick={{ fill: "#FFFFFF" }} />
-                    <Tooltip />
+                    <Tooltip content={customToolTip} />
                     <Line dot={false} type="monotone" dataKey="sessionLength" stroke="#FFFFFF" />
 
                 </LineChart>
