@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 /**
  * 
- * @param {string} uid
- * @returns template
+ @param {string} uid
+ * @returns {JSX.Element} 
  */
 const Title = ({ uid }) => {
 

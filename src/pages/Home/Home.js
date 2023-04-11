@@ -11,7 +11,7 @@ import './home.css'
 
 /**
  * Main page
- * @returns template
+ * @returns {JSX.Element} 
  */
 const Home = () => {
     let { uid } = useParams()

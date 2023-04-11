@@ -34,7 +34,7 @@ Project launched with the [Create React App](https://github.com/facebook/create-
 To work properly check your environment
 
 - [NodeJS (**version 18 or higher**)](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/)
+- [npm (**version 9.5.1 or higher**)](https://www.npmjs.com/)
 
 link to download the Rest Api
 
@@ -43,6 +43,10 @@ link to download the Rest Api
 # Installation
 
 Once the repository is cloned and in the project folder, do not forget to install the dependencies
+
+```
+cd sport-see-react
+```
 
 ```
 npm install
@@ -60,7 +64,7 @@ npm  start
 
 ### Manual switch development API
 
-Go to the root of the project in the file package.json/"scripts" and change :
+1/. Go to the root of the project in the file package.json/"scripts" and change :
 
 ```
  "start": "cross-env REACT_APP_NODE_ENV = dev-mod react-scripts start"
@@ -70,6 +74,12 @@ to
 
 ```
  "start": "cross-env REACT_APP_NODE_ENV = prod-mod react-scripts start"
+```
+
+2/.Check that the baseUrl of the api is the same as in the file of the front in root of the project .env and change if necessary
+
+```
+REACT_APP_API_URL =
 ```
 
 3/.Restart in development mode

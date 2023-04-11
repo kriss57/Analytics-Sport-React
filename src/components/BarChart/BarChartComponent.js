@@ -10,7 +10,7 @@ import './barChartComponent.css'
  */
 const BarChartComponent = ({ uid }) => {
     const [mockActivity, setMockActivity] = useState([])
-    console.log(mockActivity);
+
     useEffect(() => {
         userService.getUserActivity(parseInt(uid))
             .then(res => {
@@ -26,12 +26,10 @@ const BarChartComponent = ({ uid }) => {
     /**
      * 
      * @param {object} param0 
-     * @returns JSX Element
+     * @returns {JSX.Element} 
      */
     const customToolTip = ({ active, payload, label }) => {
-        console.log(active);
-        console.log(payload);
-        console.log(label);
+
         if (active && payload) {
             let weight = payload[0]['value']
             let CaloriesBurned = payload[1]['value']

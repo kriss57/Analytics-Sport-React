@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types'
 
 import './pieChartComponent.css'
+import { userService } from '../../_services/user.service';
 
 /**
  * 
@@ -10,11 +11,26 @@ import './pieChartComponent.css'
  * @returns template
  */
 const PieChartComponent = ({ uid }) => {
+    const [score, setScore] = useState({})
 
-    const data = [
-        { name: 'Group A', value: 1500 },
+    useEffect(() => {
+        userService.getUser(parseInt(uid))
+            .then((res) => {
+                console.log(res.data.data)
+                setScore(res.data.data)
+            })
+            .catch(err => console.log(err))
+    }, [uid])
 
-    ];
+    // formated data
+    const data = [{
+        name: 'score',
+        value: score.score || score.todayScore
+    }, {
+        name: 'empty',
+        value: 1 - score.score || 1 - score.todayScore
+    }]
+
 
     return (
         <div className='PieChartComponent'>
@@ -23,13 +39,13 @@ const PieChartComponent = ({ uid }) => {
                 <PieChart width={800} height={400} >
                     <Pie
                         data={data}
-                        cx={100}
-                        cy={80}
-                        startAngle={70}
-                        endAngle={200}
-                        innerRadius={70}
-                        outerRadius={79}
-                        fill="red"
+                        cx='50%'
+                        cy='50%'
+                        startAngle={-280}
+                        endAngle={280}
+                        innerRadius={90}
+                        outerRadius={100}
+                        fill="white"
                         dataKey="value"
                         cornerRadius={15}
                     >
@@ -38,7 +54,7 @@ const PieChartComponent = ({ uid }) => {
                 </PieChart>
 
             </ResponsiveContainer>
-            <div className="score"></div>
+            <div className="score" style={{ width: '60px' }}><span style={{ fontSize: '24px', fontWeight: 700 }}>{score.score ? score.score * 100 : score.todayScore * 100}% </span> de votre objectif</div>
 
         </div>
     );

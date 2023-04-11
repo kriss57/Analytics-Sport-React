@@ -3,7 +3,18 @@
   flex-direction: column;
   justify-content: center;
   width: 258px;
-  height: 263px;
+  height: 243px;
   padding: 20px;
-  margin-left: 20px;
+  position: relative;
+  background-color: #fbfbfb;
+  margin-left: 30px;
+}
+.score {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+}
+.perf-title {
+  margin: 0;
 }

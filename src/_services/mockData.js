@@ -4,17 +4,20 @@ import Axios from './caller.service'
 
 import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from '../_utils/mock'
 
+
 // New instance of axios-mock-adapter
 const isDev = process.env.REACT_APP_NODE_ENV === 'dev-mod'
 const mock = isDev ? new MockAdapter(Axios) : new MockAdapter(axios)
-//const mock = new MockAdapter(Axios, { onNoMatch: 'passthrough' })
+
 
 // Simulation url for request "get" for all endpoints
 
 /**
  * mock url all users 
+ * 
  */
 mock.onGet('/user_main-data').reply(200, USER_MAIN_DATA)
+
 // 
 /**
  * mock url user by id

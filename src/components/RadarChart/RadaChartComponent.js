@@ -8,8 +8,8 @@ import './radarChartComponent.css'
 
 /**
  * 
- * @param {string} uid
- * @returns template
+ @param {string} uid
+ * @returns {JSX.Element} 
  */
 const RadaChartComponent = ({ uid }) => {
     const [performance, setPerformance] = useState([])
@@ -22,18 +22,24 @@ const RadaChartComponent = ({ uid }) => {
             .catch(error => console.log(error))
     }, [uid])
 
-    // ne pas oublier de verifier avec ?  IMPORTANT
+
+    //formated kind in french and uppercase
+    const kindTrad = { 1: 'Cardio', 2: 'Energie', 3: 'Endurance', 4: 'Force', 5: 'Vitesse', 6: 'Intensité' }
+    // Formated await data
     const mapeData = performance.data?.map(d => ({
         ...d,
-        kind: performance.kind[d.kind]
+        kind: kindTrad[d.kind]
+
     }))
+    // reversed data
+    const data = mapeData?.reverse()
 
     return (
         <div className='RadarChartComponent'>
-            <ResponsiveContainer width="100%" height={220}>
-                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={mapeData}>
+            <ResponsiveContainer width="100%" height='100%'>
+                <RadarChart cx="50%" cy="50%" margin={{ top: 20, right: 20, bottom: 20, left: 20 }} outerRadius="72%" data={data}>
                     <PolarGrid radialLines={false} />
-                    <PolarAngleAxis dataKey="kind" dy={4} tickSize={17} />
+                    <PolarAngleAxis dataKey="kind" dy={5} tickSize={13} stroke='#FFF' tickLine={false} />
                     <Radar name="performance" dataKey="value" fill="red" fillOpacity={0.5} />
                 </RadarChart>
             </ResponsiveContainer>

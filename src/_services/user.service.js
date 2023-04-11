@@ -1,13 +1,20 @@
 import Axios from './caller.service'
+import axios from 'axios'
 import './mockData'
 
 const isDev = process.env.REACT_APP_NODE_ENV === 'dev-mod'
 /**
  * Recovering all users
+ * ---If is mod dev use axios and not Axios instance 
  * @returns {Promise}
  */
 let getAllUsers = () => {
-    return Axios.get('/user_main-data')
+    if (isDev) {
+        return Axios.get('/user_main-data')
+    } else {
+        return axios.get('/user_main-data')
+    }
+
 }
 /**
  * Recovering one user

@@ -3,6 +3,10 @@ import logo from '../../assets/images/logo.png'
 
 import './header.css'
 
+/**
+ * 
+ * @returns {JSX.Element} 
+ */
 const Header = () => {
     return (
         <div className='Header' style={{ backgroundColor: 'black' }}  >

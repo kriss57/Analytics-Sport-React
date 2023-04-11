@@ -6,6 +6,10 @@ import swimmer from '../../assets/images/icon-swimmer.png'
 import cycle from '../../assets/images/icon-cycle.png'
 import theRock from '../../assets/images/icon-the-rock.png'
 
+/**
+ * 
+ * @returns {JSX.Element} 
+ */
 const ItemsBar = () => {
     return (
         <div className='ItemsBar' >

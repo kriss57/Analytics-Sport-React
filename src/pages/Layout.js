@@ -4,6 +4,10 @@ import Header from '../components/header/Header';
 
 import './layout.css'
 
+/**
+ * 
+ * @returns {JSX.Element} 
+ */
 const Layout = () => {
     return (
         <div className='Layout'>
