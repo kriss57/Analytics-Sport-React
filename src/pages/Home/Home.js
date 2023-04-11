@@ -8,6 +8,7 @@ import PieChartComponent from '../../components/PieChart/PieChartComponent';
 
 
 import './home.css'
+import CounterBar from '../../components/CounterBar/CounterBar';
 
 /**
  * Main page
@@ -27,7 +28,9 @@ const Home = () => {
                     <RadaChartComponent uid={uid} />
                     <PieChartComponent uid={uid} />
                 </div>
+
             </div>
+            <CounterBar uid={uid} />
         </main>
     );
 };
