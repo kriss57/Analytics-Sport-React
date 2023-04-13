@@ -45,7 +45,7 @@ link to download the Rest Api
 Once the repository is cloned and in the project folder, do not forget to install the dependencies
 
 ```
-cd sport-see-react
+cd Analytics-Sport-React
 ```
 
 ```

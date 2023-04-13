@@ -2,13 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 300px;
+  width: 29%;
+  height: 290px;
   border-radius: 5px;
+  padding: 5px;
   background-color: #282d30;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1200px) {
   .RadarChartComponent {
-    width: 260px;
+    width: 45%;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 1024px) {

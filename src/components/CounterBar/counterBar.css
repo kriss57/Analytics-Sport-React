@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 20%;
   height: 650px;
   margin-top: 170px;
 }
@@ -24,7 +24,15 @@
   justify-content: center;
   width: 88px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1200px) {
+  .CounterBar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    height: 300px;
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .CounterBar {

@@ -2,6 +2,7 @@ import React from 'react';
 import { LineChart, XAxis, Tooltip, Line, ResponsiveContainer, YAxis } from 'recharts';
 import { useEffect, useState } from 'react';
 import { userService } from '../../_services/user.service'
+import ChartError from '../ChartError/ChartError';
 import PropTypes from 'prop-types'
 
 import './lineChartComponent.css'
@@ -23,13 +24,6 @@ const LineChartComponent = ({ uid }) => {
             .catch(error => console.log(error))
     }, [uid])
 
-    // formatage a isoler
-    const semaine = ['  L', 'M', 'M', 'J', 'V', 'S', 'D  ']
-    const mapeData = sessions.sessions?.map(s => ({
-        ...s,
-        day: semaine[s.day - 1]
-
-    }))
 
     const customToolTip = ({ active, payload, label }) => {
 
@@ -45,11 +39,12 @@ const LineChartComponent = ({ uid }) => {
     }
 
     return (
-        <div className="LineChartComponent">
+        <div style={{ position: 'relative' }} className="LineChartComponent">
+            <ChartError data={sessions.sessions} />
             <h3 className='title'>Durée moyenne des sessions</h3>
             <ResponsiveContainer width="100%" height={220}>
                 <LineChart
-                    data={mapeData}
+                    data={sessions.sessions}
                     margin={{ top: 0, bottom: 0, left: 0, right: 0 }} >
                     <YAxis axisLine={false} hide={true} />
                     <XAxis dataKey="day" ticks={10} interval='preserveStartEnd' padding={{ left: 0, right: 0 }} axisLine={false} tickLine={false} tick={{ fill: "#FFFFFF" }} />

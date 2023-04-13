@@ -4,11 +4,13 @@
 .container-graph {
   width: 100%;
   display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 .graphics {
+  width: 65%;
   display: flex;
   flex-direction: column;
-  margin-left: 130px;
 }
 .mini-graph {
   width: 100%;
@@ -16,16 +18,7 @@
   justify-content: space-between;
   margin-top: 20px;
 }
-@media screen and (max-width: 1440px) {
-  .graphics {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .Home {
-    display: flex;
-  }
+@media screen and (max-width: 1200px) {
   .container-graph {
     width: 100%;
     display: flex;
@@ -33,6 +26,21 @@
     align-items: center;
     justify-content: center;
   }
+  .graphics {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mini-graph {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Home {
+    display: flex;
+  }
+
   .graphics {
     width: 690px;
     margin: 0;

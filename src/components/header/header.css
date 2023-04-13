@@ -13,6 +13,9 @@ img {
 nav {
   width: 100%;
 }
+ul {
+  padding: 0;
+}
 .list {
   width: 100%;
   display: flex;

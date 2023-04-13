@@ -22,7 +22,7 @@ const Title = ({ uid }) => {
     return (
         <div className="Title">
             <h1 style={{ fontWeight: '500', fontSize: '48px' }}>Bonjour <span style={{ color: 'red' }} >{user.firstName}</span></h1>
-            <p style={{ marginBottom: '15px', fontSize: '18px' }}>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+            {user.firstName ? (<p style={{ marginBottom: '15px', fontSize: '18px' }}>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>) : (<p style={{ color: 'red', marginBottom: '15px', fontSize: '24px' }}>* Veuillez nous excuser, nous mettons tout en oeuvre pour mettre à jour les données !</p>)}
         </div>
 
     )

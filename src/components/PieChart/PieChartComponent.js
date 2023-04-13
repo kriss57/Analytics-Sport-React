@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types'
+import { userService } from '../../_services/user.service';
+import ChartError from '../ChartError/ChartError';
 
 import './pieChartComponent.css'
-import { userService } from '../../_services/user.service';
 
 /**
  * 
@@ -16,7 +17,6 @@ const PieChartComponent = ({ uid }) => {
     useEffect(() => {
         userService.getUser(parseInt(uid))
             .then((res) => {
-                console.log(res.data.data)
                 setScore(res.data.data)
             })
             .catch(err => console.log(err))
@@ -33,7 +33,8 @@ const PieChartComponent = ({ uid }) => {
 
 
     return (
-        <div className='PieChartComponent'>
+        <div className='PieChartComponent' style={{ position: 'relative' }}>
+            <ChartError data={data[0]} />
             <h3 className='perf-title' >Score</h3>
             <ResponsiveContainer width='100%' height={220}>
                 <PieChart width={800} height={400} >
