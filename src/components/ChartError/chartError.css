@@ -1,0 +1,31 @@
+.error-opacity {
+  background-color: rgba(70, 64, 64, 0.508);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.error-message {
+  width: 70%;
+  color: rgb(130, 234, 45);
+  opacity: 1;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+.error-image {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
