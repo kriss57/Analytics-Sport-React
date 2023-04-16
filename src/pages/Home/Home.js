@@ -22,7 +22,6 @@ const Home = () => {
             <ItemsBar />
 
             <div className="container-graph">
-
                 <div className="graphics">
                     <Title uid={uid} />
                     <BarChartComponent uid={uid} />
@@ -34,7 +33,6 @@ const Home = () => {
                 </div>
                 <CounterBar uid={uid} />
             </div>
-
         </main>
     );
 };

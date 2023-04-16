@@ -9,7 +9,7 @@ import './header.css'
  */
 const Header = () => {
     return (
-        <div className='Header' style={{ backgroundColor: 'black' }}  >
+        <header className='Header' style={{ backgroundColor: 'black' }}  >
             <img src={logo} alt="logo sportsee" />
             <nav>
                 <ul className='list'>
@@ -19,7 +19,7 @@ const Header = () => {
                     <li style={{ color: 'white', listStyleType: 'none' }}>Communauté</li>
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 };
 

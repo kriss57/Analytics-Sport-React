@@ -24,7 +24,7 @@ const CounterBar = ({ uid }) => {
             .catch(err => console.log(err))
     }, [uid])
 
-    const calorieData = allData?.calorieCount?.toLocaleString()
+    const calorieData = allData?.calorieCount?.toLocaleString("en-US", { maximumFractionDigits: 3 })
 
     return (
         <div className='CounterBar'>

@@ -35,7 +35,7 @@ const PieChartComponent = ({ uid }) => {
     return (
         <div className='PieChartComponent' style={{ position: 'relative' }}>
             <ChartError data={data[0]} />
-            <h3 className='perf-title' >Score</h3>
+            <h2 className='perf-title' >Score</h2>
             <ResponsiveContainer width='100%' height={220}>
                 <PieChart width={800} height={400} >
                     <Pie

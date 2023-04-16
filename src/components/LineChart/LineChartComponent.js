@@ -41,7 +41,7 @@ const LineChartComponent = ({ uid }) => {
     return (
         <div style={{ position: 'relative' }} className="LineChartComponent">
             <ChartError data={sessions.sessions} />
-            <h3 className='title'>Durée moyenne des sessions</h3>
+            <h2 className='title'>Durée moyenne des sessions</h2>
             <ResponsiveContainer width="100%" height={220}>
                 <LineChart
                     data={sessions.sessions}

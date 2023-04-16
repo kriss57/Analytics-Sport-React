@@ -48,7 +48,7 @@ const BarChartComponent = ({ uid }) => {
 
     return (
         <div className="BarChartConponent" >
-            <h3 className='activity-title' >Activité quotidienne</h3>
+            <h2 className='activity-title' >Activité quotidienne</h2>
             <ChartError data={mockActivity.sessions} />
             <ResponsiveContainer width='100%' >
                 <BarChart

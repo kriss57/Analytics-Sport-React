@@ -7,13 +7,9 @@ import RouterApp from './_utils/RouterApp';
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
         <RouterApp />
       </BrowserRouter>
-
-
-
     </div>
   );
 }

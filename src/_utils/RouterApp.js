@@ -9,7 +9,6 @@ const RouterApp = () => {
         <Routes>
             <Route element={<Layout />}>
                 <Route index element={<User />} />
-
                 <Route path='/user' element={<User />} />
                 <Route path='/user/home/:uid' element={<Home />} />
             </Route>
